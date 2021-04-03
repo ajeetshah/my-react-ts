@@ -1,17 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./App.css";
 import axios from "axios";
 
 export default function App() {
   const [data, setData] = useState<any>({});
   const [file, setFile] = useState<any>(null);
-
-  useEffect(() => {
-    axios.post("http://localhost:3001/v1/auth/login", {
-      username: "a@a.com",
-      password: "password",
-    });
-  }, []);
 
   const handleChange = (name) => (e) =>
     setData((d) => ({
